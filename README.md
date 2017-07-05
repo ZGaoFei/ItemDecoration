@@ -18,6 +18,8 @@
             简单实现瀑布流布局
             
 #### 推荐：
-    [Android RecyclerView 使用完全解析 体验艺术般的控件](http://blog.csdn.net/lmj623565791/article/details/45059587)
-    [深入理解 RecyclerView 系列之一：ItemDecoration](https://blog.piasy.com/2016/03/26/Insight-Android-RecyclerView-ItemDecoration/)
-    [RecycleView 动画库](https://github.com/wasabeef/recyclerview-animators)
+[Android RecyclerView 使用完全解析 体验艺术般的控件](http://blog.csdn.net/lmj623565791/article/details/45059587)
+
+[深入理解 RecyclerView 系列之一：ItemDecoration](https://blog.piasy.com/2016/03/26/Insight-Android-RecyclerView-ItemDecoration/)
+
+[RecycleView 动画库](https://github.com/wasabeef/recyclerview-animators)
