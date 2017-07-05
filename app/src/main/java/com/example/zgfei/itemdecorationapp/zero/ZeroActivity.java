@@ -49,8 +49,8 @@ public class ZeroActivity extends AppCompatActivity {
         initView();
 
         // test
-//        testDividerItemDecoration();
-        testZeroDecoration();
+        testDividerItemDecoration();
+//        testZeroDecoration();
     }
 
     private void initData() {
@@ -76,6 +76,7 @@ public class ZeroActivity extends AppCompatActivity {
 
     private void testDividerItemDecoration() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        layoutManager.setOrientation(OrientationHelper.HORIZONTAL);// 设置横向的 RecycleView
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(zeroAdapter);
 
