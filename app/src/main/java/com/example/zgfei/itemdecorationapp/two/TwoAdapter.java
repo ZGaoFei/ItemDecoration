@@ -58,14 +58,18 @@ class TwoAdapter extends RecyclerView.Adapter<TwoAdapter.ViewHolder> {
         return list == null ? 0 : list.size();
     }
 
-    public void addData(int position) {
+    void addData(int position) {
         list.add(position, "new item");
-        notifyItemInserted(position);
+        notifyItemInserted(position);// 数据刷新但是 position 没有刷新，有动画
+        notifyItemRangeChanged(position, list.size()-position);// 刷新插入位置后面的数据
+//        notifyDataSetChanged();// 可以实现数据和 position 的刷新，无动画
     }
 
-    public void removeData(int position) {
+    void removeData(int position) {
         list.remove(position);
-        notifyItemRemoved(position);
+        notifyItemRemoved(position);// 数据刷新但是 position 没有刷新，有动画
+        notifyItemRangeChanged(position, list.size()-position);// 刷新插入位置后面的数据
+//        notifyDataSetChanged();// 可以实现数据和 position 的刷新，无动画
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

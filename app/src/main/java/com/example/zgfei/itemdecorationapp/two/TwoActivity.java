@@ -62,7 +62,8 @@ public class TwoActivity extends AppCompatActivity {
         twoAdapter.setOnClickListener(new TwoAdapter.OnClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(TwoActivity.this, "item:" + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TwoActivity.this, "position:" + position + "==list:" + list.get(position), Toast.LENGTH_SHORT).show();
+
             }
         });
 
