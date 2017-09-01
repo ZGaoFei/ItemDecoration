@@ -4,11 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.zgfei.itemdecorationapp.R;
@@ -75,14 +73,21 @@ public class ZeroActivity extends AppCompatActivity {
     }
 
     private void testDividerItemDecoration() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setSmoothScrollbarEnabled(true);
+        linearLayoutManager.setAutoMeasureEnabled(true);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 //        layoutManager.setOrientation(OrientationHelper.HORIZONTAL);// 设置横向的 RecycleView
-        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(zeroAdapter);
 
 //        DividerItemDecoration decoration = new DividerItemDecoration(recyclerView.getContext(), layoutManager.getOrientation());
-        DividerItemDecoration decoration = new DividerItemDecoration(recyclerView.getContext(), LinearLayout.HORIZONTAL);
-        recyclerView.addItemDecoration(decoration);
+//        DividerItemDecoration decoration = new DividerItemDecoration(recyclerView.getContext(), LinearLayout.HORIZONTAL);
+//        recyclerView.addItemDecoration(decoration);
     }
 
     private void testZeroDecoration() {

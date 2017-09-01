@@ -45,11 +45,11 @@ public class TwoGridDecoration extends RecyclerView.ItemDecoration {
         int childCount = parent.getAdapter().getItemCount();
 
         if (isLastRaw(parent, itemPosition, spanCount, childCount)) {
-            outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
+            outRect.set(0, 0, /*mDivider.getIntrinsicWidth()*/10, 0);
         } else if (isLastColumn(parent, itemPosition, spanCount, childCount)) {
-            outRect.set(0, 0, 0, mDivider.getIntrinsicHeight());
+            outRect.set(0, 0, 0, /*mDivider.getIntrinsicHeight()*/10);
         } else {
-            outRect.set(0, 0, mDivider.getIntrinsicWidth(), mDivider.getIntrinsicHeight());
+            outRect.set(0, 0, /*mDivider.getIntrinsicWidth()*/10, /*mDivider.getIntrinsicHeight()*/10);
         }
     }
 

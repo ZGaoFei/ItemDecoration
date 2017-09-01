@@ -5,9 +5,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.zgfei.itemdecorationapp.one.OneActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_zero"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_zero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>

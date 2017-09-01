@@ -61,8 +61,8 @@ public class OneDecoration extends RecyclerView.ItemDecoration {
         //会显示在 ItemView 的上面
 //        drawCircle(c);
 
-//        drawRect(c, parent);
-        drawRedItem(c, parent);
+        drawRect(c, parent);
+//        drawRedItem(c, parent);
     }
 
     @Override
@@ -70,10 +70,10 @@ public class OneDecoration extends RecyclerView.ItemDecoration {
         super.getItemOffsets(outRect, view, parent, state);
 
 //        outRect.set(10, 10, 10, 10);
-        outRect.set(0, 0, 0, 50);
+//        outRect.set(0, 0, 0, 50);
 
 //        addItem(outRect, view, parent);
-//        addItemOne(outRect, view, parent);
+        addItemOne(outRect, view, parent);
 //        addItemTwo(outRect, view, parent);
 //        addItemThree(outRect, view, parent);
     }

@@ -10,6 +10,12 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:scaleType="fitXY"
+        android:visibility="gone"
         tools:src="@mipmap/ic_launcher"/>
+
+    <EditText
+        android:id="@+id/et_zero"
+        android:layout_width="200dp"
+        android:layout_height="50dp" />
 
 </LinearLayout>

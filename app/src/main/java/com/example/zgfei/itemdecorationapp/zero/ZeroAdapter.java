@@ -6,9 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.example.zgfei.itemdecorationapp.R;
 import com.example.zgfei.itemdecorationapp.one.OneResponse;
 
@@ -33,7 +33,8 @@ class ZeroAdapter extends RecyclerView.Adapter<ZeroAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        Glide.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+//        Glide.with(context).load(list.get(position).getImageUrl()).into(holder.imageView);
+        holder.editText.setText("====" + position);
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,11 +51,13 @@ class ZeroAdapter extends RecyclerView.Adapter<ZeroAdapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
+        private EditText editText;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             imageView = (ImageView) itemView.findViewById(R.id.iv_zero);
+            editText = (EditText) itemView.findViewById(R.id.et_zero);
         }
     }
 

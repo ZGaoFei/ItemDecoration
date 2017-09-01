@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".one.OneActivity" />
-        <activity android:name=".zero.ZeroActivity" />
+        <activity
+            android:name=".zero.ZeroActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
         <activity android:name=".two.TwoActivity"
             android:theme="@style/ListDivider"/>
     </application>
